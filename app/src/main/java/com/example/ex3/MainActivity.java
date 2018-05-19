@@ -6,8 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import static android.provider.AlarmClock.EXTRA_MESSAGE;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -15,12 +13,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Handler Button
+        // MyHandler Button
         final Button handler_but = findViewById(R.id.handler_but);
         handler_but.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent handler_intent = new Intent(MainActivity.this, Handler.class);
+                Intent handler_intent = new Intent(MainActivity.this, MyHandler.class);
                 startActivity(handler_intent);
             }
 
@@ -36,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
 
     }
 }
